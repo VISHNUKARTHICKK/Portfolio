@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishnu | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">VISHNU</div>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <p class="tagline">BUILDING IDEAS INTO CODE</p>
+      <h1>Hi, I am <span>Vishnu Karthick</span><br />A Fullstack Developer.</h1>
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Hire me</a>
+        <a href="resume.pdf" class="btn outline" download>Download CV</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="vishnu.jpg" alt="Vishnu Photo" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-content">
+        <h5 class="section-subtitle">MY INTRODUCTION</h5>
+        <h2>About Me</h2>
+        <p>
+          I'm Vishnu, Turning ideas into digital experiences through code ✨ | Fullstack Developer skilled in Java, Spring Boot, and modern web technologies | Eager to grow with a dynamic team and contribute to impactful projects.”
+        </p><br>
+        <span>“Every project is a chance to learn, grow, and deliver better.”</span><br><br>
+        <div class="about-details">
+          <p><strong>Name:</strong> Vishnu Karthick</p>
+          <p><strong>Email:</strong> vkarthick459@gmail.com</p>
+          <p><strong>Phone:</strong> +91-88380-09677</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-java"></i><h4>Java</h4></div>
+      <div class="skill-card"><i class="fas fa-leaf"></i><h4>Spring Boot</h4></div>
+      <div class="skill-card"><i class="fab fa-html5"></i><h4>HTML</h4></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><h4>CSS</h4></div>
+      <div class="skill-card"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
+      <div class="skill-card"><i class="fas fa-database"></i><h4>MySQL</h4></div>
+      <div class="skill-card"><i class="fab fa-react"></i><h4>React</h4></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+        <a href="#">
+      <div class="project-card">
+        <img src="gobuss.png" alt="Project 1" />
+        <div class="project-info">
+          <h3>Online Bus Ticket Booking System</h3>
+          <p>Java, Spring Boot, MySQL</p>
+        </div>
+      </div>
+      </a>
+       <a href="https://github.com/VISHNUKARTHICKK/Employee-Management-System">
+      <div class="project-card">
+        <img src="ems.png" alt="Project 2" />
+        <div class="project-info">
+          <h3>Employee Management System</h3>
+          <p>Java, Spring Boot, MySQL</p>
+        </div>
+      </div>
+       </a>
+       <a href="">
+      <div class="project-card">
+        <img src="e-commerce.png" alt="Project 3" />
+        <div class="project-info">
+          <h3>E-commerce Website</h3>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+       </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <h3>VISHNU.DEV</h3>
+      <p>Crafting fullstack applications with creativity ✨</p>
+      <div class="social-icons">
+        <a href="https://github.com/vishnukarthickk" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vishnu-karthick-k-783463246/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/_dynamic_vk/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="copyright">© 2025 Vishnu Karthick. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
