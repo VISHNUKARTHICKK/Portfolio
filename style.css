@@ -132,4 +132,199 @@ a{ color: #0ea5e9; text-decoration: none;}
 html {
   scroll-behavior: smooth;
 }
+/* --- Additional CSS for Interactivity and Animation --- */
 
+/* Utility for section titles */
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline animation for section titles */
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    transition: width 0.6s ease-out;
+}
+
+/* Animation on hover for section titles */
+.projects-section:hover .section-title::after,
+.skills-section:hover .section-title::after,
+.contact-section:hover .section-title::after {
+    width: 60%;
+}
+
+/* 1. Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 0 0 var(--primary);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+    }
+}
+
+
+/* 2. Hero Section Enhancements */
+.hero {
+    animation: fadeInUp 1s ease-out; /* Initial load animation */
+}
+
+.hero-left h1 span {
+    display: inline-block;
+    animation: slideInLeft 1s ease-out 0.5s backwards;
+}
+
+.hero-right img {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.5); /* Glowing effect */
+    transition: transform 0.5s ease;
+}
+
+.hero-right img:hover {
+    transform: scale(1.05) rotate(2deg); /* Interactive hover */
+    animation: pulseBorder 1.5s infinite;
+}
+
+/* 3. Skill Cards Enhancement */
+.skill-card {
+    position: relative;
+    overflow: hidden;
+    /* Remove original hover transform to use the new glow effect */
+    transform: none;
+    background: #1e293b;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+    transform: none; /* Keep original position */
+    border-color: var(--primary);
+    box-shadow: 0 0 15px var(--primary); /* Glow on hover */
+    background: #334155;
+}
+
+/* Adding a subtle shine effect */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-30deg);
+    transition: 0.5s;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+.skill-card i {
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.skill-card:hover i {
+    color: var(--accent); /* Change icon color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon */
+}
+
+
+/* 4. Project Cards Enhancement */
+.project-card {
+    position: relative;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 10px var(--accent); /* Lift and subtle glow */
+    border-color: var(--accent);
+}
+
+.project-info h3 {
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-info h3 {
+    color: var(--primary); /* Highlight title on hover */
+}
+
+.project-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.03); /* Subtle image zoom */
+}
+
+
+/* 5. Contact Form Interaction */
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5);
+    border: 1px solid var(--primary);
+}
+
+.contact-form button.btn.primary {
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button.btn.primary:hover {
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+
+/* 6. Social Icons Interaction */
+.social-icons a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #334155;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--dark);
+    background: var(--primary);
+    transform: scale(1.1) rotate(5deg);
+}
