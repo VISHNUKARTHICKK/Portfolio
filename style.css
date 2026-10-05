@@ -19,6 +19,16 @@ body {
   line-height: 1.6;
 }
 
+.csharp-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0ea5e9;
+    font-family: Arial, sans-serif;
+}
+.skill-card i {
+    font-size: 40px;
+}
+
 /* Navbar */
 .navbar {
   display: flex; justify-content: space-between; align-items: center;
@@ -328,3 +338,4 @@ html {
     background: var(--primary);
     transform: scale(1.1) rotate(5deg);
 }
+
