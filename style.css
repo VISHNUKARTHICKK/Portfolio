@@ -604,3 +604,29 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero-summary {
+    max-width: 38ch;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 23px;
+  }
+
+  .hero-summary {
+    max-width: 34ch;
+    font-size: 14px;
+  }
+}
+
